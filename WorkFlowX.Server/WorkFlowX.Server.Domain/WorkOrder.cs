@@ -3,8 +3,6 @@ using System;
 namespace WorkFlowX.Server.Domain;
 public record WorkOrder : BaseEntity
 {
-    public Guid Id { get; set; }
-
     public long WorkOrderNumber { get; set; }
 
     public string Description { get; set; }

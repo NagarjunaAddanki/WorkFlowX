@@ -1,4 +1,5 @@
 import React from 'react';
+import JobCard  from "./JobCard"; 
 import { getAllJobs } from "../Services/JobService"; 
 
 class Jobs extends React.Component {
@@ -29,13 +30,11 @@ class Jobs extends React.Component {
           return <div>Loading...</div>;
         } else {
           return (
-            <ul>
+            <div class="d-flex flex-column gap-3">
               {jobs.map(item => (
-                <li key={item.id}>
-                  {item.description}
-                </li>
+                <JobCard job={item}/>
               ))}
-            </ul>
+            </div>
           );
         }
       }

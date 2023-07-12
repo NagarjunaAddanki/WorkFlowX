@@ -21,19 +21,30 @@
   position: sticky;
   top: 0;
   width: -webkit-fill-available;
-  color: white;
+  color: white;  
 }  
-.app-body {
-  background-color: white;  
+
+.jobs-container {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-gap: 1rem;
   align-items: start;
+}
+.app-body {
+  background-color: white;  
   width: -webkit-fill-available;
   color: #282c34;
+  max-height: calc(100vh - calc(4em));
+  overflow-y: auto;  
 } 
+
+  .app-body .wfx-container {
+  max-height: inherit;
+  overflow-y: auto;
+}
+
 .app-footer {
-  height: 4em;
+  max-height: 4em;
   background-color: #282c34;  
   display: flex;
   flex-direction: row;

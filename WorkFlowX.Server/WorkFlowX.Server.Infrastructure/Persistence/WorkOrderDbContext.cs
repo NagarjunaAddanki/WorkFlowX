@@ -15,8 +15,5 @@ public class WorkOrderDbContext : DbContext, IWorkOrderContext
 
     public DbSet<Job> Jobs { get; set; }
 
-    public Task<Guid> SaveChangesAsync()
-    {
-        throw new NotImplementedException();
-    }
+    public async Task SaveChangesAsync() => await base.SaveChangesAsync();
 }

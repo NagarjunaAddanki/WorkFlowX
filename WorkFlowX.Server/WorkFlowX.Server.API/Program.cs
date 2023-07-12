@@ -1,3 +1,4 @@
+using WorkFlowX.Server.Api;
 using WorkFlowX.Server.Application;
 using WorkFlowX.Server.Infrastructure;
 
@@ -39,5 +40,7 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.UseCors();
+
+await app.Seed();
 
 app.Run();

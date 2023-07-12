@@ -9,5 +9,5 @@ public interface IWorkOrderContext
 
     DbSet<Job> Jobs { get; }
 
-    Task<Guid> SaveChangesAsync();
+    Task SaveChangesAsync();
 }
